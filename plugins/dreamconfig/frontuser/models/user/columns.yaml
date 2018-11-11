@@ -1,0 +1,17 @@
+columns:
+    name:
+        label: 'dreamconfig.frontuser::lang.plugin.name'
+        type: text
+        searchable: true
+        sortable: true
+    surname:
+        label: surname
+        type: text
+        searchable: true
+        sortable: true
+    email:
+        label: email
+        type: text
+    phone:
+        label: phone
+        type: text

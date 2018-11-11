@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table dreamconfig_frontuser_user'
+    - builder_table_create_dreamconfig_frontuser_user.php
+1.0.3:
+    - 'Updated table dreamconfig_frontuser_user'
+    - builder_table_update_dreamconfig_frontuser_users.php

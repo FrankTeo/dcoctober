@@ -1,0 +1,17 @@
+plugin:
+    name: 'dreamconfig.frontuser::lang.plugin.name'
+    description: 'dreamconfig.frontuser::lang.plugin.description'
+    author: FrankTeo
+    icon: oc-icon-user
+    homepage: ''
+permissions:
+    dreamconfig.frontuser.manage_user:
+        tab: 'dreamconfig.frontuser::lang.plugin.name'
+        label: 'dreamconfig.frontuser::lang.user.manage_users'
+navigation:
+    Users:
+        label: Users
+        url: dreamconfig/frontuser/users
+        icon: icon-user
+        permissions:
+            - dreamconfig.frontuser.manage_user

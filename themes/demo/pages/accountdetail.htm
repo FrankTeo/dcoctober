@@ -1,0 +1,29 @@
+title = "AccountDetail"
+url = "/accountdetail"
+layout = "default"
+is_hidden = 0
+
+[account]
+==
+function onStart()
+{
+    $this['email'] = Session::get('user');
+    $this['user'] = Db::table('dreamconfig_frontuser_users')->where('email', $this['email'])->first();
+}
+==
+
+
+{% if user %}
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            {% partial __SELF__ ~ '::detail' %}
+        </div>
+		<div class="col-md-1"></div>
+
+    </div>
+
+
+
+{% endif %}

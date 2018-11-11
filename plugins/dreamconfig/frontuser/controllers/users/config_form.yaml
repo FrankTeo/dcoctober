@@ -1,0 +1,11 @@
+name: Users
+modelClass: DreamConfig\FrontUser\Models\User
+form: $/dreamconfig/frontuser/models/user/fields.yaml
+defaultRedirect: dreamconfig/frontuser/users
+create:
+    redirect: 'dreamconfig/frontuser/users/update/:id'
+    redirectClose: dreamconfig/frontuser/users
+update:
+    redirect: dreamconfig/frontuser/users
+    redirectClose: dreamconfig/frontuser/users
+preview: {  }

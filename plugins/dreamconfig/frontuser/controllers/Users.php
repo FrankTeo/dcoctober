@@ -1,0 +1,22 @@
+<?php namespace DreamConfig\FrontUser\Controllers;
+
+use Backend\Classes\Controller;
+use BackendMenu;
+
+class Users extends Controller
+{
+    public $implement = [        'Backend\Behaviors\ListController',        'Backend\Behaviors\FormController'    ];
+    
+    public $listConfig = 'config_list.yaml';
+    public $formConfig = 'config_form.yaml';
+
+    public $requiredPermissions = [
+        'dreamconfig.frontuser.manage_user' 
+    ];
+
+    public function __construct()
+    {
+        parent::__construct();
+        BackendMenu::setContext('DreamConfig.FrontUser', 'Users');
+    }
+}

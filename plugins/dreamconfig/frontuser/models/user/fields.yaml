@@ -1,0 +1,24 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        placeholder: 'Please input name'
+        type: text
+    surname:
+        label: Surname
+        span: left
+        placeholder: 'Please input surname'
+        type: text
+    email:
+        label: Email
+        span: left
+        required: 1
+        type: text
+    phone:
+        label: 'Phone Number'
+        span: left
+        type: text
+    password:
+        label: Password
+        span: left
+        type: password

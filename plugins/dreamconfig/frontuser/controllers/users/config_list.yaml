@@ -1,0 +1,12 @@
+title: Users
+modelClass: DreamConfig\FrontUser\Models\User
+list: $/dreamconfig/frontuser/models/user/columns.yaml
+recordUrl: 'dreamconfig/frontuser/users/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

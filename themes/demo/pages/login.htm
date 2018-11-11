@@ -1,0 +1,26 @@
+title = "Login"
+url = "/login"
+layout = "default"
+is_hidden = 0
+
+[account]
+==
+
+{% if not user %}
+
+    <div class="row">
+
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            {% partial __SELF__ ~ '::login' %}
+        </div>
+		<div class="col-md-1"></div>
+        <div class="col-md-4">
+            {% partial __SELF__ ~ '::register' %}
+        </div>
+		<div class="col-md-1"></div>
+    </div>
+
+
+
+{% endif %}
