@@ -13,9 +13,6 @@ class AuthManager extends RainAuthManager
 
     public function authenticate(array $credentials, $remember = true)
     {
-        /*
-         * Default to the login name field or fallback to a hard-coded 'login' value
-         */
         $loginName = $this->createUserModel()->getLoginName();
         $loginCredentialKey = isset($credentials[$loginName]) ? $loginName : 'login';
 
@@ -27,18 +24,11 @@ class AuthManager extends RainAuthManager
             throw new AuthException('The password attribute is required.');
         }
 
-        /*
-         * If the fallback 'login' was provided and did not match the necessary
-         * login name, swap it over
-         */
         if ($loginCredentialKey !== $loginName) {
             $credentials[$loginName] = $credentials[$loginCredentialKey];
             unset($credentials[$loginCredentialKey]);
         }
 
-        /*
-         * Look up the user by authentication credentials.
-         */
         try {
             $user = $this->findUserByCredentials($credentials);
         }

@@ -40,9 +40,6 @@ class Account extends ComponentBase
 	public function onLogin()
     {
         try {
-            /*
-             * Validate input
-             */
             $data = post();
             $rules = [];
 
@@ -64,9 +61,6 @@ class Account extends ComponentBase
 
             $this->userSession($user);
 
-            /*
-             * Redirect
-             */
             return \Redirect::to('/');
         }
         catch (Exception $ex) {
@@ -75,9 +69,6 @@ class Account extends ComponentBase
         }
     }
     
-    /**
-     * Register the user
-     */
     public function onRegister()
     {
         try {
@@ -98,15 +89,8 @@ class Account extends ComponentBase
 
             $this->sendConfirmationEmail($user);
 
-            /*
-             * Automatically activated or not required, log the user in
-             */
             Auth::login($user);
 
-            /*
-             * Redirect to the intended page after successful sign in
-             */
-            
             $this->userSession($user);
             return \Redirect::to('/');
         }
@@ -139,9 +123,6 @@ class Account extends ComponentBase
         Session::forget('user');
     }
 
-    /**
-     * Update the user
-     */
     public function onUpdate()
     {
         $email = array_get(post(), 'email');
